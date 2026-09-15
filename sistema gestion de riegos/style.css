@@ -1,0 +1,284 @@
+
+        :root {
+            --bg-dark: #121815;
+            --panel-bg: #1c2521;
+            --card-bg: #24302b;
+            --border-color: #2e3d37;
+            --text-primary: #e1e7e4;
+            --text-secondary: #9eb0a7;
+            --accent-green: #38bdf8;
+            --btn-primary: #22c55e;
+            --btn-primary-hover: #16a34a;
+            
+            /* Badges / Estados */
+            --status-normal-bg: #14532d;
+            --status-normal-text: #4ade80;
+            --status-warning-bg: #713f12;
+            --status-warning-text: #facc15;
+            --status-danger-bg: #7f1d1d;
+            --status-danger-text: #f87171;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        /* ==========================================================================
+           HEADER / NAVEGACIÓN
+           ========================================================================== */
+        .head-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--panel-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .head-info .head-title {
+            font-size: 1.4rem;
+            color: #ffffff;
+        }
+
+        .head-info .head-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .head-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .estado-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .estado-warning {
+            background-color: var(--status-warning-bg);
+            color: var(--status-warning-text);
+            border: 1px solid var(--status-warning-text);
+        }
+
+        .head-button {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .head-button:hover, .head-button.active {
+            background-color: var(--card-bg);
+            border-color: var(--btn-primary);
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           ACCESOS RÁPIDOS
+           ========================================================================== */
+        .accesos-rapidos {
+            background-color: var(--panel-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .accesos-rapidos-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .accesos-rapidos-button {
+            background-color: var(--card-bg);
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .accesos-rapidos-button:hover {
+            background-color: #2d3d37;
+            transform: translateY(-2px);
+            border-color: var(--btn-primary);
+        }
+
+        .accesos-rapidos-button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* ==========================================================================
+           LAYOUT PRINCIPAL (GRID DASHBOARD)
+           ========================================================================== */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==========================================================================
+           PANEL DE CULTIVOS ACTIVOS
+           ========================================================================== */
+        .panel-cultivos-activos {
+            background-color: var(--panel-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .cultivos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .cultivo-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .cultivo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .nombre-cultivo {
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .especie-cultivo {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .fecha-cultivo {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .mediciones-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            background-color: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .medicion-item {
+            font-size: 0.85rem;
+        }
+
+        .medicion-val {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           PANEL DE MÉTRICAS
+           ========================================================================== */
+        .panel-metricas {
+            background-color: var(--panel-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .metrica-box {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .metrica-box h3 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .metrica-numero {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--btn-primary);
+        }
+
+        .tabla-alertas {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.85rem;
+        }
+
+        .alerta-item {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .alerta-item:last-child {
+            border-bottom: none;
+        }
+
+        .badge-optimo { background-color: var(--status-normal-bg); color: var(--status-normal-text); }
+        .badge-atencion { background-color: var(--status-warning-bg); color: var(--status-warning-text); }
+        .badge-critico { background-color: var(--status-danger-bg); color: var(--status-danger-text); }

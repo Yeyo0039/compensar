@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Gestión de Riegos</title>
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="head-container">
+        <div class="head-info">
+            <h1 class="head-title">Cultivo Inteligente — Sistema de Monitoreo</h1>
+            <span class="head-subtitle">Proyecto de Aula | Pruebas de Software I</span>
+        </div>
+        <div class="head-nav">
+            <div class="estado-badge estado-warning">Estado Actual: ATENCIÓN ⚠️</div>
+            <button class="head-button active" type="button">Inicio</button>
+            <button class="head-button" type="button">Especies</button>
+            <button class="head-button" type="button">Cultivos</button>
+            <button class="head-button" type="button">Mediciones</button> 
+        </div>
+    </header>
+
+    <!-- ACCESOS RÁPIDOS -->
+    <section class="accesos-rapidos">
+        <h2 class="section-title">Accesos Rápidos</h2>
+        <div class="accesos-rapidos-buttons">
+            <button class="accesos-rapidos-button" type="button">
+                🌱 <span>Agregar Especie</span>
+            </button>
+            <button class="accesos-rapidos-button" type="button">
+                🏡 <span>Agregar Cultivo</span>
+            </button>
+            <button class="accesos-rapidos-button" type="button">
+                🌡️ <span>Agregar Medición</span>
+            </button>
+        </div>   
+    </section>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <div class="dashboard-grid">
+
+        <!-- PANEL DE CULTIVOS ACTIVOS -->
+        <section class="panel-cultivos-activos">
+            <h2 class="section-title">Cultivos Activos</h2>
+            <div class="cultivos-container">
+                
+                <!-- Tarjeta Cultivo -->
+                <article class="cultivo-card">
+                    <div class="cultivo-header">
+                        <div>
+                            <h3 class="nombre-cultivo">Lote Tomate Norte</h3>
+                            <span class="especie-cultivo">Tomate Cherry</span>
+                        </div>
+                        <span class="estado-badge badge-atencion">ATENCIÓN</span>
+                    </div>
+                    <p class="fecha-cultivo">Fecha Inicio: 10/09/2026</p>
+                    <div class="mediciones-grid">
+                        <div class="medicion-item">
+                            <span>Temp:</span>
+                            <span class="medicion-val">31.0 °C</span>
+                        </div>
+                        <div class="medicion-item">
+                            <span>Humedad:</span>
+                            <span class="medicion-val">55.0 %</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cultivo-card">
+                    <div class="cultivo-header">
+                        <div>
+                            <h3 class="nombre-cultivo">Lote Albahaca Interior</h3>
+                            <span class="especie-cultivo">Albahaca Silvestre</span>
+                        </div>
+                        <span class="estado-badge badge-optimo">ÓPTIMO</span>
+                    </div>
+                    <p class="fecha-cultivo">Fecha Inicio: 12/09/2026</p>
+                    <div class="mediciones-grid">
+                        <div class="medicion-item">
+                            <span>Temp:</span>
+                            <span class="medicion-val">24.5 °C</span>
+                        </div>
+                        <div class="medicion-item">
+                            <span>Humedad:</span>
+                            <span class="medicion-val">63.0 %</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PANEL DE MÉTRICAS Y RESUMEN -->
+        <section class="panel-metricas">
+            <h2 class="section-title">Métricas y Resumen General</h2>
+            
+            <div class="metrica-box">
+                <h3>Total de Cultivos Activos</h3>
+                <div class="metrica-numero">2</div>
+            </div>
+
+            <div class="metrica-box">
+                <h3>Especies Registradas</h3>
+                <div class="metrica-numero">4</div>
+            </div>
+
+            <div class="metrica-box">
+                <h3>Últimas Alertas Detectadas</h3>
+                <div class="tabla-alertas">
+                    <div class="alerta-item">
+                        <span>Medición M003 (Temp. Alta)</span>
+                        <span class="estado-badge badge-atencion">ALTA</span>
+                    </div>
+                    <div class="alerta-item">
+                        <span>Medición M003 (Hum. Baja)</span>
+                        <span class="estado-badge badge-atencion">BAJA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
