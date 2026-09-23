@@ -12,7 +12,7 @@
     <header class="head-container">
         <div class="head-info">
             <h1 class="head-title">Cultivo Inteligente — Sistema de Monitoreo</h1>
-            <span class="head-subtitle">Proyecto de Aula | Pruebas de Software I</span>
+            
         </div>
         <div class="head-nav">
             <div class="estado-badge estado-warning">Estado Actual: ATENCIÓN ⚠️</div>
@@ -124,6 +124,247 @@
 
     </div>
 
+    <!-- FORMULARIO DE ESPECIE -->
+    <section class="formulario-especie">
+        <div class="form-content">
+            <div class="form-section">
+                <h2 class="section-title">Agregar Nueva Especie</h2>
+                <form class="especie-form" action="#" method="post">
+                    <div class="form-panel">
+                        <div class="panel-header">
+                            <h3>Datos básicos</h3>
+                        </div>
+
+                        <label for="nombre-especie">Nombre de la Especie:</label>
+                        <input 
+                            type="text" 
+                            id="nombre-especie" 
+                            name="nombre-especie" 
+                            minlength="10" 
+                            maxlength="100" 
+                            required
+                            title="El nombre debe tener entre 10 y 100 caracteres."
+                            placeholder="Ej: Tomate Cherry orgánico"
+                        >
+
+                        <label for="descripcion-especie">Descripción de la especie:</label>
+                        <textarea 
+                            id="descripcion-especie" 
+                            name="descripcion-especie" 
+                            minlength="10" 
+                            maxlength="500" 
+                            required
+                            title="La descripción debe contener entre 10 y 500 caracteres."
+                            placeholder="Describe las características principales, requerimientos y uso de la especie."
+                        ></textarea>
+
+                        <label for="tipo-especie">Selecciona el tipo de planta:</label>
+                        <select id="tipo-especie" name="tipo-especie" required title="Selecciona un tipo de planta.">
+                            <option value="">Seleccione un tipo</option>
+                            <option value="vegetal">Vegetal</option>
+                            <option value="fruta">Fruta</option>
+                            <option value="flor">Flor</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="info-panel" id="form-temperatura">
+                            <div class="panel-header">
+                                <h3>Datos de Temperatura</h3>
+                            </div>
+
+                            <label for="temperatura-optima-minima">Temperatura óptima mínima (°C):</label>
+                            <input 
+                                type="number" 
+                                id="temperatura-optima-minima" 
+                                name="temperatura-optima-minima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La temperatura debe estar entre 0°C y 100°C."
+                                placeholder="Ej: 18"
+                            >
+
+                            <label for="temperatura-optima-maxima">Temperatura óptima máxima (°C):</label>
+                            <input 
+                                type="number" 
+                                id="temperatura-optima-maxima" 
+                                name="temperatura-optima-maxima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La temperatura debe estar entre 0°C y 100°C."
+                                placeholder="Ej: 30"
+                            >
+
+                            <label for="temperatura-minima">Temperatura mínima permitida (°C):</label>
+                            <input 
+                                type="number" 
+                                id="temperatura-minima" 
+                                name="temperatura-minima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La temperatura mínima debe estar entre 0°C y 100°C."
+                                placeholder="Ej: 10"
+                            >
+
+                            <label for="temperatura-maxima">Temperatura máxima permitida (°C):</label>
+                            <input 
+                                type="number" 
+                                id="temperatura-maxima" 
+                                name="temperatura-maxima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La temperatura máxima debe estar entre 0°C y 100°C."
+                                placeholder="Ej: 35"
+                            >
+                        </div>
+
+                        <div class="info-panel" id="form-humedad">
+                            <div class="panel-header">
+                                <h3>Datos de Humedad</h3>
+                            </div>
+
+                            <label for="humedad-optima-minima">Humedad óptima mínima (%):</label>
+                            <input 
+                                type="number" 
+                                id="humedad-optima-minima" 
+                                name="humedad-optima-minima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La humedad debe estar entre 0% y 100%."
+                                placeholder="Ej: 50"
+                            >
+
+                            <label for="humedad-optima-maxima">Humedad óptima máxima (%):</label>
+                            <input 
+                                type="number" 
+                                id="humedad-optima-maxima" 
+                                name="humedad-optima-maxima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La humedad debe estar entre 0% y 100%."
+                                placeholder="Ej: 70"
+                            >
+
+                            <label for="humedad-minima">Humedad mínima (%):</label>
+                            <input 
+                                type="number" 
+                                id="humedad-minima" 
+                                name="humedad-minima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La humedad mínima debe estar entre 0% y 100%."
+                                placeholder="Ej: 40"
+                            >
+
+                            <label for="humedad-maxima">Humedad máxima (%):</label>
+                            <input 
+                                type="number" 
+                                id="humedad-maxima" 
+                                name="humedad-maxima" 
+                                min="0" 
+                                max="100" 
+                                step="0.1" 
+                                required
+                                title="La humedad máxima debe estar entre 0% y 100%."
+                                placeholder="Ej: 80"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-panel">
+                        <div class="panel-header">
+                            <h3>Riego y crecimiento</h3>
+                        </div>
+
+                        <label for="fase-crecimiento">Fase de crecimiento:</label>
+                        <select id="fase-crecimiento" name="fase-crecimiento" required title="Selecciona la fase de crecimiento.">
+                            <option value="">Seleccione una fase</option>
+                            <option value="germinacion">Germinación</option>
+                            <option value="vegetativa">Vegetativa</option>
+                            <option value="floracion">Floración</option>
+                            <option value="fructificacion">Fructificación</option>
+                        </select>
+
+                        <label for="intervalo-riego">Intervalo de riego recomendado (días):</label>
+                        <input 
+                            type="number" 
+                            id="intervalo-riego" 
+                            name="intervalo-riego" 
+                            min="1" 
+                            max="365" 
+                            step="1" 
+                            required
+                            title="El intervalo de riego debe estar entre 1 y 365 días."
+                            placeholder="Intervalo de riego (días)"
+                        >
+
+                        <label for="volumen-riego">Volumen de riego recomendado por metro cuadrado (litros/m²):</label>
+                        <input 
+                            type="number" 
+                            id="volumen-riego" 
+                            name="volumen-riego" 
+                            min="0" 
+                            max="1000" 
+                            step="0.1" 
+                            required
+                            title="El volumen de riego debe estar entre 0 y 1000 litros por m²."
+                            placeholder="Volumen de riego (litros/m²)"
+                        >
+
+                        <label for="tipo-sustrato">Tipo de sustrato:</label>
+                        <select id="tipo-sustrato" name="tipo-sustrato" required title="Selecciona un tipo de sustrato.">
+                            <option value="">Seleccione un tipo de sustrato</option>
+                            <option value="arenoso">Arenoso</option>
+                            <option value="arcilloso">Arcilloso</option>
+                            <option value="franco">Franco</option>
+                            <option value="turba">Turba</option>
+                            <option value="compost">Compost</option>
+                            <option value="fibra-de-coco">Fibra de Coco</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="primary-button">Agregar Especie</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!----FORMULARIO cultivo ------>
+    <section class="formulario-cultivo">
+        <div id="form-content">
+            <div class="form-section">
+                <h2 class="section-title">Agregar Nuevo Cultivo</h2>
+                <form class="cultivo-form" action="#" method="post">
+                    <label for="nombre-cultivo">Nombre del cultivo:</label>
+                    <input 
+                        type="text" 
+                        name="nombre-cultivo" 
+                        id="nombre-cultivo" 
+                        minlength="10" 
+                        maxlength="100" 
+                        required
+                        title="El nombre del cultivo debe tener entre 10 y 100 caracteres."
+                        placeholder="Ej: Lote de tomate de invernadero norte"
+                    >
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
