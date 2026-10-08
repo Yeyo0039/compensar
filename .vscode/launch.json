@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "listaDoble",
+            "request": "launch",
+            "mainClass": "listaDoble",
+            "projectName": "compensar_50b15d4a"
+        },
+        {
+            "type": "java",
+            "name": "promedio1",
+            "request": "launch",
+            "mainClass": "promedio1",
+            "projectName": "compensar_50b15d4a"
+        },
+        {
+            "type": "java",
+            "name": "Run MATRIS",
+            "request": "launch",
+            "mainClass": "MATRIS",
+            "projectName": "compensar"
+        },
+        {
+            "type": "java",
+            "request": "attach",
+            "name": "Java",
+            "port": 5005,
+            "sourceRoots": []
+        },
+        {
+            "type": "jdk",
+            "request": "launch",
+            "name": "Launch Java App"
+        }
+    ]
+}
