@@ -6,6 +6,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PlaylistEnlazada",
+            "request": "launch",
+            "mainClass": "PlaylistEnlazada",
+            "projectName": "compensar_50b15d4a",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "FiltroNumerico",
+            "request": "launch",
+            "mainClass": "FiltroNumerico",
+            "projectName": "compensar_50b15d4a"
+        },
+        {
+            "type": "java",
+            "name": "Problema3",
+            "request": "launch",
+            "mainClass": "Problema3",
+            "projectName": "compensar_50b15d4a"
+        },
+        {
+            "type": "java",
             "name": "listaDoble",
             "request": "launch",
             "mainClass": "listaDoble",
